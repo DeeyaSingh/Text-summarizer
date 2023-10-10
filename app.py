@@ -5,8 +5,8 @@ import torch
 
 class Summarizer:
     def __init__(self):
-        self.model = T5ForConditionalGeneration.from_pretrained("t5-large")
-        self.tokenizer = T5Tokenizer.from_pretrained("t5-large")
+        self.model = T5ForConditionalGeneration.from_pretrained("t5-base")
+        self.tokenizer = T5Tokenizer.from_pretrained("t5-base")
 
     def summarize(self, text: str, max_length: int) -> str:
         # Tokenize the input text
